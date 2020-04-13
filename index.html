@@ -16,6 +16,21 @@
             Your browser doesn't support canvas
         </canvas>
     </div>
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            var canvasElement = document.getElementById("canvas");
+            if (canvasElement && canvasElement.getContext) {
+                canvasElement.width = 640
+                canvasElement.height = 480
+
+                var ctx = canvasElement.getContext("2d")
+                if (ctx) {
+                    ctx.fillStyle = "lightBlue"
+                    ctx.fillRect(0, 0, canvasElement.width, canvasElement.height)
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
