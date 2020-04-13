@@ -25,11 +25,28 @@
 
                 var ctx = canvasElement.getContext("2d")
                 if (ctx) {
-                    ctx.fillStyle = "lightBlue"
-                    ctx.strokeStyle = "lightGreen"
-                    ctx.lineWidth = 4;
-                    ctx.fillRect(0, 0, canvasElement.width, canvasElement.height)
-                    ctx.strokeRect(0, 0, canvasElement.width, canvasElement.height)
+                    //strokeRect
+                    ctx.strokeStyle = 'red'
+                    ctx.lineWidth = 3
+                    ctx.strokeRect(10, 10, 40, 40)
+
+                    //fillRect
+                    ctx.fillStyle = 'lightBlue'
+                    ctx.fillRect(80, 10, 40, 40)
+
+
+                    //storeRect with fillRect
+                    ctx.strokeRect(150, 10, 40, 40)
+                    ctx.fillRect(150, 10, 40, 40)
+
+                    //clearRect
+                    ctx.strokeRect(150, 10, 40, 40)
+                    ctx.fillRect(150, 10, 40, 40)
+
+                    //clearRect
+                    ctx.fillRect(210, 10, 40, 40)
+                    ctx.clearRect(220, 20, 20, 20)
+
                 }
             }
         })
